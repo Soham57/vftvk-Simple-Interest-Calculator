@@ -1,16 +1,43 @@
 <html>
-    <head>
+  <head>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@900&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Simple Interest Calculator</h1>
+    <div class="form">
+      <div class="field">
+        <label for="principal">Amount</label>
+        <input type="number" id="principal" />
+      </div>
+      <br />
+      <div class="field">
+        <label for="rate">Rate</label>
+        <input
+          type="range"
+          min="1"
+          value="1"
+          step="0.5"
+          id="rate"
+          oninput="this.nextElementSibling.value = this.value"
+        />
+        <output>1</output><span>%</span>
+      </div>
+      <br />
+      <div class="field">
+        <label for="years">No. of Years</label>
+        <input type="number" id="years" />
+      </div>
+      <br />
+      <button onclick="compute()">Compute Interest</button>
+      <div id="result"></div>
+    </div>
+    <p>&copy; Everyone can get rich</p>
+  </body>
 </html>
