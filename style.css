@@ -2,6 +2,13 @@ body {
   margin: 30px;
   width: 500px;
   font-family: "Open Sans", sans-serif;
+  background-color: black;
+}
+
+.main{
+	background-color:white;
+	border-radius:30px;
+	padding:10px 40px;
 }
 
 h1 {
@@ -16,4 +23,26 @@ h1 {
 
 #result {
   margin-top: 30px;
+  display: none;
+}
+
+a{
+	color:red;
+	text-decoration: none;
+}
+
+.fields {
+    display:grid;
+    grid-template-columns: max-content max-content 20px;
+    grid-gap:5px;
+}
+.fields label{
+	text-align:left; 
+}
+.fields label:after { 
+content: ":"; 
+}
+
+#principal, #years{
+grid-column:2/4;
 }
